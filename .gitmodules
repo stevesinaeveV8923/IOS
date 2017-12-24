@@ -1,0 +1,3 @@
+[submodule "caruse/Alamofire"]
+	path = caruse/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
