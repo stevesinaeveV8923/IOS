@@ -24,9 +24,26 @@ class UserService {
                     if let value = response.result.value {
                         let post = JSON(value)
                         self.saveToken(post)
+                        KeychainWrapper.standard.set(parameters["username"]!, forKey: "username")
                         completion(true)
                     }
                 default : completion(false)
+                }
+        }
+    }
+    
+    func logout(completion: @escaping (Bool) -> Void) -> Void {
+        Alamofire.request(url + "logout", method: .post, parameters: [:], encoding: JSONEncoding.default, headers: [:])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                        KeychainWrapper.standard.set("", forKey: "token")
+                        KeychainWrapper.standard.set("", forKey: "userId")
+                        KeychainWrapper.standard.set("", forKey: "username")
+                        completion(true)
+                case .failure(let error) :
+                    print(error)
+                    completion(false)
                 }
         }
     }
@@ -46,6 +63,7 @@ class UserService {
                     if let value = response.result.value {
                         let post = JSON(value)
                         self.saveToken(post)
+                        KeychainWrapper.standard.set(parameters["username"]!, forKey: "username")
                         completion(true)
                     }
                 default : completion(false)
@@ -59,7 +77,6 @@ class UserService {
         if let key = post["token"].string, let userid = post["userId"].string {
             KeychainWrapper.standard.set(key, forKey: "token")
             KeychainWrapper.standard.set(userid, forKey: "userId")
-            print(KeychainWrapper.standard.string(forKey: "token")!)
         } else {
             print("error detected")
         }

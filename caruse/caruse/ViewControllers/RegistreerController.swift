@@ -23,4 +23,21 @@ class RegistreerComponent: UIViewController {
             }
         }
     }
+    
+    @IBAction func hideKeyboard(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func login(){
+        self.performSegue(withIdentifier: "login", sender: self)
+    }
+
+    
+    @IBAction func moveFocus() {
+        if usernameField.resignFirstResponder() {
+            paswordField.becomeFirstResponder()
+        } else if paswordField.resignFirstResponder() {
+            passwordCompareField.becomeFirstResponder()
+        }
+    }
 }

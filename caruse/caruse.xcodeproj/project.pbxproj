@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32087A3D1FF3B0410020E02A /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A3C1FF3B0410020E02A /* LogoutController.swift */; };
+		321EC3931FF388800034112A /* VoertuigHuurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321EC3921FF388800034112A /* VoertuigHuurController.swift */; };
 		3243E2B31FEE52A400F72578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243E2B21FEE52A400F72578 /* AppDelegate.swift */; };
 		3243E2B51FEE52A400F72578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243E2B41FEE52A400F72578 /* ViewController.swift */; };
-		3243E2B81FEE52A400F72578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243E2B61FEE52A400F72578 /* Main.storyboard */; };
 		3243E2BA1FEE52A400F72578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3243E2B91FEE52A400F72578 /* Assets.xcassets */; };
 		3243E2BD1FEE52A400F72578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243E2BB1FEE52A400F72578 /* LaunchScreen.storyboard */; };
 		3243E2CB1FEE655300F72578 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243E2CA1FEE655300F72578 /* UserService.swift */; };
+		32799A711FF2FECD0015ACD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32799A701FF2FECC0015ACD5 /* Main.storyboard */; };
+		3295A0AF1FF2CA65007E2569 /* AddVoertuigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295A0AE1FF2CA65007E2569 /* AddVoertuigController.swift */; };
 		329B9DF61FEE927E00EFC48C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B9DF71FEE927E00EFC48C /* SwiftyJSON.framework */; };
 		329B9DFE1FEEB41900EFC48C /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329B9DFF1FEEB41900EFC48C /* SwiftKeychainWrapper.framework */; };
 		329B9E011FEEBA2100EFC48C /* OverzichtController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E001FEEBA2100EFC48C /* OverzichtController.swift */; };
 		329B9E031FEF02F400EFC48C /* RegistreerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E021FEF02F400EFC48C /* RegistreerController.swift */; };
 		329B9E061FEF941B00EFC48C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E051FEF941B00EFC48C /* APIService.swift */; };
+		329B9E281FEFAA5700EFC48C /* Voertuig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E271FEFAA5700EFC48C /* Voertuig.swift */; };
+		329B9E2A1FEFAC6E00EFC48C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E291FEFAC6E00EFC48C /* Review.swift */; };
+		329B9E2D1FEFCB2700EFC48C /* EigenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E2C1FEFCB2700EFC48C /* EigenController.swift */; };
+		329B9E311FEFF04400EFC48C /* VoertuigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E301FEFF04400EFC48C /* VoertuigCell.swift */; };
+		329B9E331FF0F5FB00EFC48C /* VoertuigDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E321FF0F5FB00EFC48C /* VoertuigDetailController.swift */; };
+		329B9E351FF23F4E00EFC48C /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E341FF23F4E00EFC48C /* CommentController.swift */; };
+		329B9E371FF240DE00EFC48C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E361FF240DE00EFC48C /* CommentCell.swift */; };
 		32F2E5FC1FEE83FF001F256C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E5FF1FEE83FF001F256C /* Alamofire.framework */; };
 		32F2E5FD1FEE83FF001F256C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E6001FEE83FF001F256C /* AlamofireObjectMapper.framework */; };
 		32F2E5FE1FEE83FF001F256C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E6011FEE83FF001F256C /* ObjectMapper.framework */; };
@@ -26,20 +36,30 @@
 
 /* Begin PBXFileReference section */
 		237899F7186370994A9F423A /* Pods-caruse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caruse.release.xcconfig"; path = "Pods/Target Support Files/Pods-caruse/Pods-caruse.release.xcconfig"; sourceTree = "<group>"; };
+		32087A3C1FF3B0410020E02A /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
+		321EC3921FF388800034112A /* VoertuigHuurController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoertuigHuurController.swift; sourceTree = "<group>"; };
 		3243E2AF1FEE52A400F72578 /* caruse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = caruse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3243E2B21FEE52A400F72578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3243E2B41FEE52A400F72578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3243E2B71FEE52A400F72578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3243E2B91FEE52A400F72578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3243E2BC1FEE52A400F72578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3243E2BE1FEE52A400F72578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3243E2CA1FEE655300F72578 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		32799A701FF2FECC0015ACD5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3295A0AE1FF2CA65007E2569 /* AddVoertuigController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoertuigController.swift; sourceTree = "<group>"; };
 		329B9DF71FEE927E00EFC48C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		329B9DFB1FEEAB9100EFC48C /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		329B9DFF1FEEB41900EFC48C /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		329B9E001FEEBA2100EFC48C /* OverzichtController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverzichtController.swift; sourceTree = "<group>"; };
 		329B9E021FEF02F400EFC48C /* RegistreerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistreerController.swift; sourceTree = "<group>"; };
 		329B9E051FEF941B00EFC48C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		329B9E271FEFAA5700EFC48C /* Voertuig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voertuig.swift; sourceTree = "<group>"; };
+		329B9E291FEFAC6E00EFC48C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		329B9E2C1FEFCB2700EFC48C /* EigenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EigenController.swift; sourceTree = "<group>"; };
+		329B9E301FEFF04400EFC48C /* VoertuigCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoertuigCell.swift; sourceTree = "<group>"; };
+		329B9E321FF0F5FB00EFC48C /* VoertuigDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoertuigDetailController.swift; sourceTree = "<group>"; };
+		329B9E341FF23F4E00EFC48C /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
+		329B9E361FF240DE00EFC48C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		32F2E5FF1FEE83FF001F256C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2E6001FEE83FF001F256C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2E6011FEE83FF001F256C /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +110,7 @@
 				3243E2C51FEE599100F72578 /* Views */,
 				3243E2C41FEE598400F72578 /* Model */,
 				3243E2B21FEE52A400F72578 /* AppDelegate.swift */,
-				3243E2B61FEE52A400F72578 /* Main.storyboard */,
+				32799A701FF2FECC0015ACD5 /* Main.storyboard */,
 				3243E2B91FEE52A400F72578 /* Assets.xcassets */,
 				3243E2BB1FEE52A400F72578 /* LaunchScreen.storyboard */,
 				3243E2BE1FEE52A400F72578 /* Info.plist */,
@@ -101,6 +121,8 @@
 		3243E2C41FEE598400F72578 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				329B9E271FEFAA5700EFC48C /* Voertuig.swift */,
+				329B9E291FEFAC6E00EFC48C /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +130,8 @@
 		3243E2C51FEE599100F72578 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				329B9E301FEFF04400EFC48C /* VoertuigCell.swift */,
+				329B9E361FF240DE00EFC48C /* CommentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +142,12 @@
 				3243E2B41FEE52A400F72578 /* ViewController.swift */,
 				329B9E001FEEBA2100EFC48C /* OverzichtController.swift */,
 				329B9E021FEF02F400EFC48C /* RegistreerController.swift */,
+				329B9E2C1FEFCB2700EFC48C /* EigenController.swift */,
+				329B9E321FF0F5FB00EFC48C /* VoertuigDetailController.swift */,
+				329B9E341FF23F4E00EFC48C /* CommentController.swift */,
+				3295A0AE1FF2CA65007E2569 /* AddVoertuigController.swift */,
+				321EC3921FF388800034112A /* VoertuigHuurController.swift */,
+				32087A3C1FF3B0410020E02A /* LogoutController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,9 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32799A711FF2FECD0015ACD5 /* Main.storyboard in Resources */,
 				3243E2BD1FEE52A400F72578 /* LaunchScreen.storyboard in Resources */,
 				3243E2BA1FEE52A400F72578 /* Assets.xcassets in Resources */,
-				3243E2B81FEE52A400F72578 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,25 +322,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				329B9E031FEF02F400EFC48C /* RegistreerController.swift in Sources */,
+				329B9E2D1FEFCB2700EFC48C /* EigenController.swift in Sources */,
+				329B9E2A1FEFAC6E00EFC48C /* Review.swift in Sources */,
+				329B9E351FF23F4E00EFC48C /* CommentController.swift in Sources */,
+				321EC3931FF388800034112A /* VoertuigHuurController.swift in Sources */,
+				329B9E331FF0F5FB00EFC48C /* VoertuigDetailController.swift in Sources */,
 				3243E2CB1FEE655300F72578 /* UserService.swift in Sources */,
 				3243E2B51FEE52A400F72578 /* ViewController.swift in Sources */,
 				329B9E011FEEBA2100EFC48C /* OverzichtController.swift in Sources */,
 				329B9E061FEF941B00EFC48C /* APIService.swift in Sources */,
+				329B9E281FEFAA5700EFC48C /* Voertuig.swift in Sources */,
+				329B9E311FEFF04400EFC48C /* VoertuigCell.swift in Sources */,
+				3295A0AF1FF2CA65007E2569 /* AddVoertuigController.swift in Sources */,
 				3243E2B31FEE52A400F72578 /* AppDelegate.swift in Sources */,
+				329B9E371FF240DE00EFC48C /* CommentCell.swift in Sources */,
+				32087A3D1FF3B0410020E02A /* LogoutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3243E2B61FEE52A400F72578 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3243E2B71FEE52A400F72578 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3243E2BB1FEE52A400F72578 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,11 +466,15 @@
 			baseConfigurationReference = F6D6B24134382149319E9251 /* Pods-caruse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P85987K6ZZ;
 				INFOPLIST_FILE = caruse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.stevesinaeve.caruse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,11 +485,15 @@
 			baseConfigurationReference = 237899F7186370994A9F423A /* Pods-caruse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P85987K6ZZ;
 				INFOPLIST_FILE = caruse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.stevesinaeve.caruse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
