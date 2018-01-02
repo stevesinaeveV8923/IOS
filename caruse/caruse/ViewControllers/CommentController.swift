@@ -12,12 +12,18 @@ class CommentController: UIViewController {
     private var indexPathToEdit: IndexPath!
     
     override func viewDidLoad() {
+        omschrijvingText.setBottomBorder()
+        self.hideKeyboardWhenTappedAround()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
         self.tableView?.addSubview(refreshControl)
         
         title = "\(voertuig.merk!) \(voertuig.type!)"
         self.tableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
     }
     
     @objc func refresh(_ sender:AnyObject) {
@@ -72,6 +78,7 @@ extension CommentController: UITableViewDataSource {
         print("test2")
         print(voertuig.reviews![indexPath.row])
         cell.review = voertuig.reviews![indexPath.row]
+        cell.viewCell.layer.cornerRadius = 20.0
         cell.voertuigId = voertuig._id
         return cell
     }

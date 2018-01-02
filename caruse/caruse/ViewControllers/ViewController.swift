@@ -6,6 +6,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var paswordField: UITextField!
 
     override func viewDidLoad() {
+        usernameField.setBottomBorder()
+        paswordField.setBottomBorder()
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
     }
     
@@ -28,6 +31,14 @@ class ViewController: UIViewController {
         default:
             fatalError("Unkown segue")
         }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     @IBAction func hideKeyboard(_ sender: UITextField) {

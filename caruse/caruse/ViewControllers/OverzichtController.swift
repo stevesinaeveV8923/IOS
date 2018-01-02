@@ -15,15 +15,17 @@ class OverzichtController: UIViewController {
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
         self.tableView?.addSubview(refreshControl)
-
-        
         
         APIService.sharedInstance.AlleVoertuigen { (voertuigen) in
             self.voertuigen = voertuigen
             self.tableView.reloadData()
         }
     }
-
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
     @objc func refresh(_ sender:AnyObject) {
         self.loadVoertuigen()
     }
@@ -67,7 +69,16 @@ extension OverzichtController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "voertuigCell", for: indexPath) as! VoertuigCell
+        cell.picture.roundCorners([.topLeft, .topRight], radius: 20.0)
+        cell.cellView.layer.cornerRadius = 20.0
         cell.voertuig = voertuigen[indexPath.row]
         return cell
+    }
+}
+
+
+extension OverzichtController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
     }
 }

@@ -188,12 +188,12 @@ class APIService {
         let parameters = [
             "merk": voertuig.merk!,
             "type": voertuig.type!,
-            "verhuurd": !voertuig.verhuurd!,
+            "verhuurd": false,
             "regio": voertuig.regio!,
             "omschrijving": voertuig.omschrijving!,
             "username" : voertuig.username!,
-            "picture" : voertuig.picture!,
-            "reviews" : voertuig.reviews!
+            "_userId": voertuig._userId!,
+            "picture" : voertuig.picture!
             ] as [String : Any]
         
         let urlVoerAdd = urlVoer + "/add"

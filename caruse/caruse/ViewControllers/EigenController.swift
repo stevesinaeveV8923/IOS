@@ -67,6 +67,10 @@ extension EigenController: UITableViewDelegate {
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
 }
 
 
@@ -84,6 +88,8 @@ extension EigenController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailsVoertuig", for: indexPath) as! VoertuigCell
+        cell.picture.roundCorners([.topLeft, .topRight], radius: 20.0)
+        cell.cellView.layer.cornerRadius = 20.0
         cell.voertuig = voertuigen[indexPath.row]
         return cell
     }

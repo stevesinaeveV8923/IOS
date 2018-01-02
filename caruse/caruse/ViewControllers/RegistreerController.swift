@@ -8,6 +8,10 @@ class RegistreerComponent: UIViewController {
     @IBOutlet weak var passwordCompareField: UITextField!
     
     override func viewDidLoad() {
+        usernameField.setBottomBorder()
+        paswordField.setBottomBorder()
+        passwordCompareField.setBottomBorder()
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
     }
     
@@ -22,6 +26,14 @@ class RegistreerComponent: UIViewController {
                 }
             }
         }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     @IBAction func hideKeyboard(_ sender: UITextField) {

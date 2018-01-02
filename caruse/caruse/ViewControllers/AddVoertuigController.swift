@@ -1,7 +1,7 @@
 import UIKit
 import SwiftKeychainWrapper
 
-class AddVoertuigController: UIViewController,UINavigationControllerDelegate,  UIImagePickerControllerDelegate {
+class AddVoertuigController: UITableViewController,UINavigationControllerDelegate,  UIImagePickerControllerDelegate {
     
     @IBOutlet weak var merkField :UITextField!
     @IBOutlet weak var typeField :UITextField!
@@ -13,17 +13,24 @@ class AddVoertuigController: UIViewController,UINavigationControllerDelegate,  U
     
     var voertuig: Voertuig!
     var username: String = ""
-    var foto: UIImage = UIImage()
+    var userId: String = ""
+    var foto: UIImage?
     
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         imagePickerController.delegate = self
+        self.textFieldsIngevuld()
         self.username = KeychainWrapper.standard.string(forKey: "username")!
+        self.userId = KeychainWrapper.standard.string(forKey: "userId")!
     }
     
     @IBAction func save() {
-        voertuig = Voertuig(merk: merkField.text!, type: typeField.text!, regio: regioField.text!, omschrijving: omschrijvingField.text!, username: username)
-        voertuig.imageToString(UIImagePNGRepresentation(self.foto)!)
-        print(voertuig.picture ?? "we shall see")
+        voertuig = Voertuig(merk: merkField.text!, type: typeField.text!, regio: regioField.text!, omschrijving: omschrijvingField.text!, username: username, userId: userId )
+        if self.foto === nil {
+            voertuig.imageToString(UIImagePNGRepresentation(UIImage(named: "LOGO")!)!)
+        } else {
+            voertuig.imageToString(UIImagePNGRepresentation(self.foto!)!) // duurt zeer lang! --> kan het efficiënter?
+        }
         if voertuig != nil {
             performSegue(withIdentifier: "didAddVoertuig", sender: self)
         }
@@ -43,18 +50,6 @@ class AddVoertuigController: UIViewController,UINavigationControllerDelegate,  U
         }
     }
 
-
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case "didAddVoertuig"?:
-//            voertuig = Voertuig(merk: merkField.text!, type: typeField.text!, regio: regioField.text!, omschrijving: omschrijvingField.text!, username: username)
-//            voertuig.imageToString(UIImagePNGRepresentation(self.foto)!)
-//            print(voertuig.picture ?? "we shall see")
-//        default:
-//            fatalError("Unknown segue")
-//        }
-//    }
     
     @IBAction func onPhotoButton(_ sender: Any) {
 
@@ -63,23 +58,37 @@ class AddVoertuigController: UIViewController,UINavigationControllerDelegate,  U
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imagePickerController.dismiss(animated: true, completion: nil)
         self.foto = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
-        
+        imagePickerController.dismiss(animated: true, completion: nil)
     }
-}
-
-extension AddVoertuigController: UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = merkField.text {
-            let oldText = text as NSString
-            let newText = oldText.replacingCharacters(in: range, with: string)
-            saveButton.isEnabled = newText.count > 0
-        } else {
-            saveButton.isEnabled = string.count > 0 
+    func textFieldsIngevuld() {
+        saveButton.isEnabled = false
+        merkField.addTarget(self, action: #selector(textFieldsControle),
+                                    for: .editingChanged)
+        typeField.addTarget(self, action: #selector(textFieldsControle),
+                                     for: .editingChanged)
+        regioField.addTarget(self, action: #selector(textFieldsControle),
+                                        for: .editingChanged)
+        omschrijvingField.addTarget(self, action: #selector(textFieldsControle),
+                                              for: .editingChanged)
+    }
+    
+    @objc func textFieldsControle(_ tf: UITextField) {
+        
+        tf.text = tf.text?.trimmingCharacters(in: .whitespaces)
+        
+        guard
+            let merk = merkField.text, !merk.isEmpty,
+            let type = typeField.text, !type.isEmpty,
+            let regio = regioField.text, !regio.isEmpty,
+            let omschrijving = omschrijvingField.text, !omschrijving.isEmpty
+            else
+        {
+            saveButton.isEnabled = false
+            return
         }
-        return true
+        saveButton.isEnabled = true
     }
 }
 

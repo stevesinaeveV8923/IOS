@@ -4,6 +4,7 @@ import ObjectMapper
 
 class Voertuig: Mappable {
     var _id: String?
+    var _userId: String?
     var merk: String?
     var type: String?
     var verhuurd: Bool?
@@ -13,7 +14,7 @@ class Voertuig: Mappable {
     var picture: String?
     var reviews: [Review]?
     
-    init(merk: String, type: String, regio: String, omschrijving: String, username: String) {
+    init(merk: String, type: String, regio: String, omschrijving: String, username: String, userId: String) {
         self.merk = merk
         self.type = type
         self.regio = regio
@@ -22,6 +23,8 @@ class Voertuig: Mappable {
         self.username = username
         self.reviews = Array<Review>()
         self.picture = ""
+        self._userId = userId
+        
     }
     
     required init?(map: Map) {
@@ -40,6 +43,7 @@ class Voertuig: Mappable {
         self.verhuurd <- map["verhuurd"]
         self.username <- map["username"]
         self._id <- map["_id"]
+        self._userId <- map["user"]
         self.reviews <- map["reviews"]
         self.picture <- map["picture"]
     }

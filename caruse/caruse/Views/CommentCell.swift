@@ -8,6 +8,7 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var likeField :UILabel!
     @IBOutlet weak var dislikeField :UILabel!
     @IBOutlet weak var gebruikerField :UILabel!
+    @IBOutlet weak var viewCell: UIView!
 
     
     var review: Review! {
@@ -35,6 +36,7 @@ class CommentCell: UITableViewCell {
         print("voertuigid \(voertuigId)")
         APIService.sharedInstance.editReview(review: review, voertuigId: voertuigId) { (r) in
             self.instellenParam(r)
+            self.likeField.text = String(self.review.like!.count)
         }
         
     }
@@ -56,6 +58,7 @@ class CommentCell: UITableViewCell {
         print("voertuigid \(voertuigId)")
         APIService.sharedInstance.editReview(review: review, voertuigId: voertuigId) { (r) in
             self.instellenParam(r)
+            self.dislikeField.text = String(self.review.dislike!.count)
         }
     }
     
@@ -68,18 +71,6 @@ class CommentCell: UITableViewCell {
         onderwerpField.text = rev.onderwerp
         likeField.text = String(rev.like!.count)
         dislikeField.text = String(rev.dislike!.count)
-        self.loadReview()
-    }
-    
-    
-    func loadReview() {
-        APIService.sharedInstance.AlleVoertuigen { (v) in
-            self.review = v.filter({ (voer) -> Bool in
-                voer._id == self.voertuigId
-            })[0].reviews?.filter({ (rev) -> Bool in
-                rev._id == self.review._id
-            })[0]
-        }
     }
 }
 
