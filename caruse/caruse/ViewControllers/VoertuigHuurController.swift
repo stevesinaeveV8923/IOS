@@ -28,7 +28,6 @@ class VoertuigHuurController: UIViewController {
                 self.performSegue(withIdentifier: "didEditVoertuig", sender: self)
 
             }
-            // self.navigationController?.popViewController(animated: true)
         }
     }
     

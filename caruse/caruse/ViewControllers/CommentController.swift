@@ -35,7 +35,6 @@ class CommentController: UIViewController {
             self.voertuig = v.filter({ (voer) -> Bool in
                 voer._id == self.voertuig._id
             })[0]
-            // tell refresh control it can stop showing up now
             if self.refreshControl.isRefreshing
             {
                 self.refreshControl.endRefreshing()

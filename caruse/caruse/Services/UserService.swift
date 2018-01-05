@@ -13,8 +13,8 @@ class UserService {
     
     func logIn(username u: String, password p: String, completion: @escaping (Bool) -> Void) -> Void {
         let parameters = [
-            "username": u, //email
-            "password": p //password
+            "username": u,
+            "password": p
         ]
         Alamofire.request(url + "login", method: .post, parameters: parameters as? [String: Any], encoding: JSONEncoding.default, headers: [:])
             .responseJSON { response in
@@ -52,8 +52,8 @@ class UserService {
     
     func registreer(username u: String, password p: String, completion: @escaping (Bool) -> Void) {
         let parameters = [
-            "username": u, //email
-            "password": p //password
+            "username": u,
+            "password": p 
         ]
         Alamofire.request(url + "register", method: .post, parameters: parameters as? [String: Any], encoding: JSONEncoding.default, headers: [:])
             .responseJSON { response in

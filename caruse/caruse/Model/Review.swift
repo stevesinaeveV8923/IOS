@@ -2,12 +2,6 @@ import Foundation
 import ObjectMapper
 
 class Review: Mappable{
-//    private _id: String;
-//    private _like: String[];
-//    private _dislike: String[];
-//    private _onderwerp: String;
-//    private _gebruiker: String;
-//    private _date: Date;
     
     var _id : String?
     var like: [String]?

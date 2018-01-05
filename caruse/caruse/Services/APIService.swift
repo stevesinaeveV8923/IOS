@@ -13,7 +13,6 @@ class APIService {
     private let Auth_header: [String: String]
     private let username : String
     private let userId: String
-//    private var manager: SessionManager
     
     private init() {
         self.token = "Bearer \(KeychainWrapper.standard.string(forKey: "token")!)"
@@ -29,19 +28,12 @@ class APIService {
 
         Alamofire.request(urlVoer + "/all",method: .get, encoding: JSONEncoding.default, headers: self.Auth_header).validate()
             .responseJSON { response in
-                //let statusCode = response.response?.statusCode
                 switch response.result {
                 case .success:
-                    //if let value = response.result.value {
-//                        let post = JSON(value)
-//                        print(post)
-//                        // mappen naar voertuig
-//                        let json = response.result.value
                     guard let jsonArray = response.result.value as? Array<[String: AnyObject]> else { return }
                         
                     guard let voertuigen:[Voertuig] = Mapper<Voertuig>().mapArray(JSONArray: jsonArray ) else { print ("error with mapping")}
                         completion(voertuigen)
-//                    }
                 default : completion(Array<Voertuig>())
                 }
         }
