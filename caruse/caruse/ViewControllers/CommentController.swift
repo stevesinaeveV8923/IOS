@@ -56,8 +56,6 @@ class CommentController: UIViewController {
             self.tableView.reloadData()
         }
     }
-    
-    
 }
 
 extension CommentController: UITableViewDataSource {

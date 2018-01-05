@@ -49,6 +49,13 @@ class AddVoertuigController: UITableViewController,UINavigationControllerDelegat
             omschrijvingField.becomeFirstResponder()
         }
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if !splitViewController!.isCollapsed {
+            navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+        }
+    }
 
     
     @IBAction func onPhotoButton(_ sender: Any) {

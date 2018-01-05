@@ -28,6 +28,8 @@
 		329B9E331FF0F5FB00EFC48C /* VoertuigDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E321FF0F5FB00EFC48C /* VoertuigDetailController.swift */; };
 		329B9E351FF23F4E00EFC48C /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E341FF23F4E00EFC48C /* CommentController.swift */; };
 		329B9E371FF240DE00EFC48C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B9E361FF240DE00EFC48C /* CommentCell.swift */; };
+		32E61BE31FFF6696006026C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E61BE21FFF6695006026C3 /* Extensions.swift */; };
+		32E61BE51FFF8E8E006026C3 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E61BE41FFF8E8E006026C3 /* EmptyViewController.swift */; };
 		32F2E5FC1FEE83FF001F256C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E5FF1FEE83FF001F256C /* Alamofire.framework */; };
 		32F2E5FD1FEE83FF001F256C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E6001FEE83FF001F256C /* AlamofireObjectMapper.framework */; };
 		32F2E5FE1FEE83FF001F256C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F2E6011FEE83FF001F256C /* ObjectMapper.framework */; };
@@ -60,6 +62,8 @@
 		329B9E321FF0F5FB00EFC48C /* VoertuigDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoertuigDetailController.swift; sourceTree = "<group>"; };
 		329B9E341FF23F4E00EFC48C /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		329B9E361FF240DE00EFC48C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		32E61BE21FFF6695006026C3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		32E61BE41FFF8E8E006026C3 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		32F2E5FF1FEE83FF001F256C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2E6001FEE83FF001F256C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2E6011FEE83FF001F256C /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,7 @@
 				3243E2B91FEE52A400F72578 /* Assets.xcassets */,
 				3243E2BB1FEE52A400F72578 /* LaunchScreen.storyboard */,
 				3243E2BE1FEE52A400F72578 /* Info.plist */,
+				32E61BE21FFF6695006026C3 /* Extensions.swift */,
 			);
 			path = caruse;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				3295A0AE1FF2CA65007E2569 /* AddVoertuigController.swift */,
 				321EC3921FF388800034112A /* VoertuigHuurController.swift */,
 				32087A3C1FF3B0410020E02A /* LogoutController.swift */,
+				32E61BE41FFF8E8E006026C3 /* EmptyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 				329B9E351FF23F4E00EFC48C /* CommentController.swift in Sources */,
 				321EC3931FF388800034112A /* VoertuigHuurController.swift in Sources */,
 				329B9E331FF0F5FB00EFC48C /* VoertuigDetailController.swift in Sources */,
+				32E61BE51FFF8E8E006026C3 /* EmptyViewController.swift in Sources */,
 				3243E2CB1FEE655300F72578 /* UserService.swift in Sources */,
 				3243E2B51FEE52A400F72578 /* ViewController.swift in Sources */,
 				329B9E011FEEBA2100EFC48C /* OverzichtController.swift in Sources */,
@@ -335,6 +342,7 @@
 				329B9E311FEFF04400EFC48C /* VoertuigCell.swift in Sources */,
 				3295A0AF1FF2CA65007E2569 /* AddVoertuigController.swift in Sources */,
 				3243E2B31FEE52A400F72578 /* AppDelegate.swift in Sources */,
+				32E61BE31FFF6696006026C3 /* Extensions.swift in Sources */,
 				329B9E371FF240DE00EFC48C /* CommentCell.swift in Sources */,
 				32087A3D1FF3B0410020E02A /* LogoutController.swift in Sources */,
 			);

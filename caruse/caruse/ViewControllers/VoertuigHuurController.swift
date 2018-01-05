@@ -32,6 +32,13 @@ class VoertuigHuurController: UIViewController {
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if !splitViewController!.isCollapsed {
+            navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+        }
+    }
+    
     
     private func reload(voer: Voertuig) {
         self.verhuurd = voer.verhuurd!

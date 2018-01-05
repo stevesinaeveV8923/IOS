@@ -8,6 +8,7 @@ class EigenController: UIViewController {
     private var voorlopigVoertuig: Int = 0
     
     override func viewDidLoad() {
+        splitViewController!.delegate = self
         APIService.sharedInstance.AlleEigenVoertuigen {
             (v) in
             self.voertuigen = v
@@ -20,7 +21,7 @@ class EigenController: UIViewController {
         case "addVoertuig"?:
             break
         case "showDetail"?:
-            let voertuigHuurController = segue.destination as! VoertuigHuurController
+            let voertuigHuurController = (segue.destination as! UINavigationController).topViewController as! VoertuigHuurController
             let selection = tableView.indexPathForSelectedRow!
             voorlopigVoertuig = selection.row
             voertuigHuurController.voertuig = self.voertuigen[selection.row]
@@ -37,6 +38,11 @@ class EigenController: UIViewController {
             APIService.sharedInstance.addVoertuig(voertuig: addVoertuigController.voertuig!, Completion: { (voertuig) in
                 self.voertuigen.append(voertuig)
                 self.tableView.insertRows(at: [IndexPath(row: self.voertuigen.count - 1, section: 0)], with: .automatic)
+                
+                if self.checkwidth() {
+                    self.tableView.selectRow(at: NSIndexPath(row: self.voertuigen.count - 1, section: 0) as IndexPath, animated: true, scrollPosition: .bottom)
+                    self.performSegue(withIdentifier: "showDetail", sender: self)
+                }
             })
         case "didEditVoertuig"?:
             let voertuigHuurController = segue.source as! VoertuigHuurController
@@ -46,6 +52,15 @@ class EigenController: UIViewController {
         default:
             fatalError("Unkown segue")
         }
+    }
+    
+    
+    
+    func checkwidth() -> Bool {
+        
+        let width = UIScreen.main.bounds.size.width
+        
+        return (width > 700)
     }
 }
 
@@ -92,5 +107,13 @@ extension EigenController: UITableViewDataSource {
         cell.cellView.layer.cornerRadius = 20.0
         cell.voertuig = voertuigen[indexPath.row]
         return cell
+    }
+}
+
+extension EigenController: UISplitViewControllerDelegate {
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        let showingProjects = (secondaryViewController as? UINavigationController)?.topViewController is VoertuigDetailController
+        return !showingProjects
     }
 }
