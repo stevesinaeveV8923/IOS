@@ -83,13 +83,11 @@ class AddVoertuigController: UITableViewController,UINavigationControllerDelegat
     
     @objc func textFieldsControle(_ tf: UITextField) {
         
-        tf.text = tf.text?.trimmingCharacters(in: .whitespaces)
-        
         guard
-            let merk = merkField.text, !merk.isEmpty,
-            let type = typeField.text, !type.isEmpty,
-            let regio = regioField.text, !regio.isEmpty,
-            let omschrijving = omschrijvingField.text, !omschrijving.isEmpty
+            let merk = merkField.text, !merk.trimmingCharacters(in: .whitespaces).isEmpty,
+            let type = typeField.text, !type.trimmingCharacters(in: .whitespaces).isEmpty,
+            let regio = regioField.text, !regio.trimmingCharacters(in: .whitespaces).isEmpty,
+            let omschrijving = omschrijvingField.text, !omschrijving.trimmingCharacters(in: .whitespaces).isEmpty
             else
         {
             saveButton.isEnabled = false

@@ -459,10 +459,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yrh-nK-tTn">
-                                                    <rect key="frame" x="5" y="4" width="310" height="41.5"/>
+                                                    <rect key="frame" x="5" y="4" width="758" height="41.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="moveFocus" destination="X0J-4u-pqf" eventType="editingDidEndOnExit" id="Vbo-79-0U7"/>
                                                     </connections>
@@ -488,10 +488,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-Ko-fpx">
-                                                    <rect key="frame" x="5" y="4" width="310" height="41.5"/>
+                                                    <rect key="frame" x="5" y="4" width="758" height="41.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="moveFocus" destination="X0J-4u-pqf" eventType="editingDidEndOnExit" id="f5Y-W3-UNK"/>
                                                     </connections>
@@ -517,10 +517,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-r4-Inc">
-                                                    <rect key="frame" x="5" y="4" width="310" height="41.5"/>
+                                                    <rect key="frame" x="5" y="4" width="758" height="41.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="moveFocus" destination="X0J-4u-pqf" eventType="editingDidEndOnExit" id="Vhh-gF-FxU"/>
                                                     </connections>
@@ -546,10 +546,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ux-yz-rrY">
-                                                    <rect key="frame" x="21" y="15" width="278" height="60"/>
+                                                    <rect key="frame" x="25" y="15" width="718" height="60"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="hideKeyboard:" destination="X0J-4u-pqf" eventType="editingDidEndOnExit" id="AgK-zy-A8J"/>
                                                     </connections>
