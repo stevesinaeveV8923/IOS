@@ -13,7 +13,7 @@ class VoertuigCell: UITableViewCell {
         didSet {
             merkLabel.text = voertuig.merk
             typeLabel.text = voertuig.type
-            regioLabel.text = voertuig.regio
+            regioLabel?.text = voertuig.regio
             picture.image = voertuig.convertImage()
             gebruikerLabel?.text = voertuig.username
         }

@@ -6,7 +6,7 @@ class AddVoertuigController: UITableViewController,UINavigationControllerDelegat
     @IBOutlet weak var merkField :UITextField!
     @IBOutlet weak var typeField :UITextField!
     @IBOutlet weak var regioField : UITextField!
-    @IBOutlet weak var omschrijvingField :UITextField!
+    @IBOutlet weak var omschrijvingField :UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var imagePickerController : UIImagePickerController! = UIImagePickerController()
@@ -77,8 +77,6 @@ class AddVoertuigController: UITableViewController,UINavigationControllerDelegat
                                      for: .editingChanged)
         regioField.addTarget(self, action: #selector(textFieldsControle),
                                         for: .editingChanged)
-        omschrijvingField.addTarget(self, action: #selector(textFieldsControle),
-                                              for: .editingChanged)
     }
     
     @objc func textFieldsControle(_ tf: UITextField) {
@@ -86,8 +84,7 @@ class AddVoertuigController: UITableViewController,UINavigationControllerDelegat
         guard
             let merk = merkField.text, !merk.trimmingCharacters(in: .whitespaces).isEmpty,
             let type = typeField.text, !type.trimmingCharacters(in: .whitespaces).isEmpty,
-            let regio = regioField.text, !regio.trimmingCharacters(in: .whitespaces).isEmpty,
-            let omschrijving = omschrijvingField.text, !omschrijving.trimmingCharacters(in: .whitespaces).isEmpty
+            let regio = regioField.text, !regio.trimmingCharacters(in: .whitespaces).isEmpty
             else
         {
             saveButton.isEnabled = false

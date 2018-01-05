@@ -43,6 +43,10 @@ class EigenController: UIViewController {
                     self.tableView.selectRow(at: NSIndexPath(row: self.voertuigen.count - 1, section: 0) as IndexPath, animated: true, scrollPosition: .bottom)
                     self.performSegue(withIdentifier: "showDetail", sender: self)
                 }
+                let bericht = "Voertuig \(voertuig.merk!) \(voertuig.type!) is toegevoegd"
+                let alert = UIAlertController(title: "Update", message: bericht, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "sluit", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             })
         case "didEditVoertuig"?:
             let voertuigHuurController = segue.source as! VoertuigHuurController
